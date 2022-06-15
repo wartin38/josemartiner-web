@@ -1,0 +1,273 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=IBM+Plex+Serif:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link rel="icon" href="{% static 'img/josemartiner-logo.png' %}">
+    <title>Jose Martiner</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header-container">
+        <header class="header">
+          <div class="logo">
+            <a href="{% url 'home' %}" class="logo__link">
+              <img
+                class="logo__image"
+                src="{% static  'img/josemartiner-logo.png'%}"
+                alt="jose-martiner-logo"
+              />
+              <span class="logo-text">Jose Martiner</span>
+            </a>
+          </div>
+          <div class="navegacion">
+            <input
+              type="checkbox"
+              class="navegacion__checkbox"
+              id="nav-toggle"
+            />
+            <label for="nav-toggle" class="navegacion__boton">
+              <span class="navegacion__icono">&nbsp;</span>
+            </label>
+            <div class="navegacion__fondo">&nbsp;</div>
+            <nav class="navegacion__menu">
+              <ul class="navegacion__lista">
+                <li class="navegacion__item">
+                  <a href="{% url 'home' %}" class="navegacion__link">
+                    <span>Inicio</span>
+                  </a>
+                </li>
+                <li class="navegacion__item">
+                  <a href="#benef" class="navegacion__link">
+                    <span>Beneficios</span>
+                  </a>
+                </li>
+                <li class="navegacion__item">
+                  <a href="#who" class="navegacion__link">
+                    <span>Quién soy</span>
+                  </a>
+                </li>
+                <li class="navegacion__item">
+                  <a href="#contact" class="navegacion__link">
+                    <span>Contacto</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </header>
+      </div>
+      <section class="hero">
+        <div class="column-1">
+          <h1 class="main-message">¡Tu negocio más guapo en internet!</h1>
+          <h2 class="secondary-message">
+            No te conformes con sitios web aburridos. Te ayudo a crear un sitio
+            web moderno y funcional. ¿O te gustaría tu propia aplicación móvil
+            para smartphones?
+          </h2>
+          <h3 class="aburrido">
+            Nota: Si quieres un sitio web aburrido, sin problema lo hago
+            también.
+          </h3>
+          <div class="main-buttons-container">
+            <a href="#contact" class="main-action-button">Hagámoslo</a>
+            <a href="#benef" class="secondary-action-button">Beneficios Web</a>
+            <a href="#benefApp" class="secondary-action-button"
+              >Beneficios App</a
+            >
+          </div>
+        </div>
+        <div class="column-2">
+          <img
+            src="{% static 'img/guapo.png' %}"
+            alt="un perro con gafas"
+            class="imagen-cover"
+          />
+        </div>
+      </section>
+
+      <section class="beneficiosWeb" id="benef">
+        <h3 class="beneficios-titulo">
+          Algunos beneficios de tener un sitio web conmigo
+        </h3>
+        <div class="beneficios-container">
+          <div class="beneficios-col-1">
+            <img
+              src="{% static 'img/buho.png' %}"
+              alt="un buho con una laptop"
+              class="imagen-buho"
+            />
+          </div>
+          <div class="beneficios-col-2">
+            <ul class="beneficios-lista">
+              <li class="beneficios-elemento">
+                <span
+                  >&#9758; Tendrás un sitio web hecho con cuidado y dedicación.
+                  Tu negocio lucirá más profesional.</span
+                >
+              </li>
+              <li class="beneficios-elemento">
+                <span
+                  >&#9758; Tu sitio cargará rápido. Tus clientes no tendrán que
+                  esperar para ver tus productos o servicios.</span
+                >
+              </li>
+              <li class="beneficios-elemento">
+                <span
+                  >&#9758; Tu sitio lucirá muy bien tanto en pantallas de
+                  celulares como en las de laptops y computadoras de
+                  escritorio.</span
+                >
+              </li>
+              <li class="beneficios-elemento">
+                <span
+                  >&#9758; No requieres conocimientos técnicos o de diseño. Yo
+                  te ayudo con eso.
+                </span>
+              </li>
+              <li class="beneficios-elemento">
+                <span
+                  >&#9758; ¡Podrás presumir a todos tus familiares, amigos y
+                  conocidos que tienes tu propia página de internet! ¡Y que se
+                  ve muy bien!</span
+                >
+              </li>
+            </ul>
+            <a href="#contact" class="contactanos">Saber más</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="beneficiosApp" id="benefApp">
+        <h3 class="beneficios-titulo">Algunos beneficios de una App móvil</h3>
+        <div class="beneficios-container">
+          <div class="beneficios-col-1">
+            <img
+              src="{% static 'img/phone-app.png' %}"
+              alt="manos usando celulares"
+              class="imagen-celulares"
+            />
+          </div>
+          <div class="beneficios-col-2">
+            <ul class="beneficios-lista">
+              <li class="beneficios-elemento">
+                <span
+                  >&#9758; Una aplicación móvil es, por lo general, más veloz
+                  que un sitio web.</span
+                >
+              </li>
+              <li class="beneficios-elemento">
+                <span
+                  >&#9758; Puedes tener más opciones y funcionalidad a tu gusto,
+                  como ofrecer descuentos y promociones.</span
+                >
+              </li>
+              <li class="beneficios-elemento">
+                <span
+                  >&#9758; Puedes mandar notificaciones directamente a tus
+                  usuarios. Aunque no estén usando la app en ese momento.</span
+                >
+              </li>
+              <li class="beneficios-elemento">
+                <span
+                  >&#9758; La información de tu servicio o negocio estará al
+                  alcance de la mano de tus clientes. Lo cual puede aumentar la
+                  fidelidad.
+                </span>
+              </li>
+              <li class="beneficios-elemento">
+                <span
+                  >&#9758; Tu negocio destacará del resto de tus competidores.
+                </span>
+              </li>
+              <li class="beneficios-elemento">
+                <span
+                  >&#9758; ¡Podrás presumir a todos tus familiares, amigos y
+                  conocidos que tienes tu propia aplicación! ¡Y que funciona muy
+                  bien!</span
+                >
+              </li>
+            </ul>
+            <a href="#contact" class="contactanos">Saber más</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="quienes" id="who">
+        <div class="quienes-col-izq">
+          <h3 class="quienes-titulo">¿Yo?</h3>
+          <!-- <img src="{% static 'img/mi_foto.png' %}" alt="foto de jose martin" class="mi-foto"> -->
+          <h4 class="trabajo">¡Te ayudo con el trabajo pesado!</h4>
+          <p class="quienes-texto">
+            Mi nombre es Jose Martin, soy desarrollador de software y quiero
+            ayudarte a que tengas tu propio sitio web con un diseño atractivo. O
+            a que tengas tu propia aplicación móvil para dispositivos Android.
+            Considero que los grandes, conocidos y monstruosos sitios de
+            internet no deben de llevarse toda la atención. Por eso estoy
+            comprometido con tu satisfacción total. Pongamos tu negocio, idea o
+            proyecto en internet. Dale vida a tus ideas con un diseño original
+            que llamará la atención. Yo no utilizo plantillas prefabricadas.
+          </p>
+          <p class="quienes-texto">
+            ¡Anímate y da el salto a las plataformas digitales!
+          </p>
+          <p class="quienes-texto">¿Qué esperas? ¡Preguntar no cuesta nada!</p>
+          <a href="#contact" class="contactanos">Preguntar</a>
+        </div>
+        <div class="quienes-col-der">
+          <img
+            src="{% static 'img/trabajo.png' %}"
+            alt="hormiga cargando piedra"
+            class="images-quienes"
+          />
+        </div>
+      </section>
+
+      <section class="contacto" id="contact">
+        <h3 class="contacto-titulo">Contacto</h3>
+        <div class="form-container">
+          <div class="form-col-izq">
+            <p class="contacto-closing">
+              Ponte en contacto conmigo. Te responderé lo más pronto posible.
+            </p>
+            <p class="mi-whats">
+              Mi whatsapp:
+              <img
+                src="{% static 'img/imagen-whats.png' %}"
+                alt="mi numero de whats app"
+                class="imagen-whats"
+              />
+            </p>
+            <p class="texto-forma">
+              O mándame un correo-e usando la siguiente forma:
+            </p>
+            <form class="contact-form" method="POST">
+              {% csrf_token %} {{ form.as_p }}
+              <button class="boton-enviar">Enviar</button>
+            </form>
+          </div>
+          <div class="form-col-der">
+            <img
+              src="{% static 'img/contacto3.png' %}"
+              alt="dos jovenes brincando alegres"
+              class="imagen-form"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="footer">
+        <p class="info">&copy; Jose Martiner {% now "Y" %}</p>
+      </section>
+    </div>
+  </body>
+</html>
